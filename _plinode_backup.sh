@@ -20,7 +20,7 @@ FUNC_DB_VARS(){
     ## VARIABLE / PARAMETER DEFINITIONS
     # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-
+# varsファイルの有無を確認なければ、sampleをコピーして作って、権限変更
     PLI_DB_VARS_FILE="plinode_$(hostname -f)"_bkup.vars
     if [ ! -e ~/$PLI_DB_VARS_FILE ]; then
         #clear
@@ -33,6 +33,7 @@ FUNC_DB_VARS(){
         chmod 600 ~/$PLI_DB_VARS_FILE
         echo
     fi
+# varsファイルを読み込み。新しく作ったものだけではなく、既存のものも。
     source ~/$PLI_DB_VARS_FILE
 }
 
