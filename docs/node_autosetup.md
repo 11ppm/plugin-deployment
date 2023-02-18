@@ -25,8 +25,9 @@
    i.  Now we clone down the install scripts repository
 
         cd $HOME
-        git clone https://github.com/GoPlugin/plugin-deployment.git
+        git clone https://github.com/11ppm/plugin-deployment.git
         cd plugin-deployment
+        git checkout apothem
         chmod +x *.sh
 
   
